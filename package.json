@@ -3,13 +3,30 @@
     "displayName": "Ini for VSCode",
     "description": "Provide outline view and section folding for INI file.",
     "version": "0.0.1",
-    "publisher": "davidwang",
+    "publisher": "DavidWang",
+    "homepage": "https://github.com/davidwang88/ini-for-vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/davidwang88/ini-for-vscode.git"
+	},
+	"bugs": {
+		"url": "https://github.com/davidwang88/ini-for-vscode/issues"
+	},
+	"license": "GPL",
     "engines": {
         "vscode": "^1.25.0"
     },
+    "keywords": [
+		"ini",
+		"reg",
+		"cfg",
+		"outline",
+		"folding"
+	],
     "categories": [
         "Other"
     ],
+    "icon": "icon.png",
     "activationEvents": [
         "onLanguage:ini"
     ],
