@@ -6,9 +6,14 @@ class IniFoldingRangeProvider {
         const result = [];
 
         // 段
-        const sectionRegex = /\[([^\]]+)\]/;
+        const sectionRegex = /^\[([^\]]+)\]/;
         // 键
         const keyRegex = /^\s*([^\[;=]+)\s*=/;
+
+        // 支持嵌套的region语法：;region 和 ;endregion
+        const regionStartRegex = /^\s*\;region/i;
+        const regionEndRegex = /^\s*\;endregion/i;
+        var regionStartElements = [];
 
         let prevSecName = null;
         let prevSecLineStart = null;
@@ -42,6 +47,24 @@ class IniFoldingRangeProvider {
             const keyMatched = text.match(keyRegex);
             if((prevSecName != null) && keyMatched){
                 lastKeyLine = line;   
+                continue;
+            }
+
+            // 匹配region语法开始，加入到起始Region数组里面记录
+            const regionStartMatched = text.match(regionStartRegex);
+            if (regionStartMatched)
+            {
+                regionStartElements.push(line);
+                continue;
+            }
+
+            // 匹配到一个region语法结束，从起始Region数组里面取最近一个来配对（Region语法支持嵌套！）
+            const regionEndMatched = text.match(regionEndRegex);
+            if (regionEndMatched && regionStartElements.length>0)
+            {
+                const nearestStartLine = regionStartElements.pop();
+                const foldingRange = new vscode.FoldingRange(nearestStartLine, line, vscode.FoldingRangeKind.Region);
+                result.push(foldingRange);
                 continue;
             }
         }
