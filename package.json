@@ -2,7 +2,7 @@
     "name": "ini-for-vscode",
     "displayName": "Ini for VSCode",
     "description": "Provide outline view and section folding for INI file.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "DavidWang",
     "homepage": "https://github.com/davidwang88/ini-for-vscode",
 	"repository": {
