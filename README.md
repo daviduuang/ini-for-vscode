@@ -21,6 +21,10 @@ None.
 None.
 
 ## Release Notes
+
+### [0.0.4]
+- Improve section/key/region regex to match accurately.
+
 ### [0.0.3]
 - Modify README.TXT.
 

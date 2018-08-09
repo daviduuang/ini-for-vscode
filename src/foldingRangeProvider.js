@@ -6,13 +6,13 @@ class IniFoldingRangeProvider {
         const result = [];
 
         // 段
-        const sectionRegex = /^\[([^\]]+)\]/;
+        const sectionRegex = /^\s*\[([^\]]+)\]/;
         // 键
         const keyRegex = /^\s*([^\[;=]+)\s*=/;
 
         // 支持嵌套的region语法：;region 和 ;endregion
-        const regionStartRegex = /^\s*\;region/i;
-        const regionEndRegex = /^\s*\;endregion/i;
+        const regionStartRegex = /^\s*\;+\s*region/i;
+        const regionEndRegex = /^\s*\;+\s*endregion/i;
         var regionStartElements = [];
 
         let prevSecName = null;
