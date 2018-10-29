@@ -1,4 +1,6 @@
-# ini-for-vscode README
+# ini-for-vscode
+
+[![License](https://img.shields.io/badge/license-GPL--3.0-green.svg)](https://github.com/DavidWang88/ini-for-vscode/blob/master/LICENSE) [![Version](https://vsmarketplacebadge.apphb.com/version/davidwang.ini-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=DavidWang.ini-for-vscode) [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/davidwang.ini-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=DavidWang.ini-for-vscode) [![Ratings](https://vsmarketplacebadge.apphb.com/rating/davidwang.ini-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=DavidWang.ini-for-vscode)
 
 **VSCode extension for ini file.**
 
