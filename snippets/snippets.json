@@ -1,0 +1,10 @@
+{
+    "se": {
+        "description": "[se]ction",
+        "prefix": "se",
+        "body": [
+            "[${1:name}]",
+            "$0"
+        ]
+    }
+}
