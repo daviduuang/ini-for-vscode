@@ -32,6 +32,12 @@
     ],
     "main": "./src/extension",
     "contributes": {
+        "snippets": [
+            {
+                "language": "ini",
+                "path": "./snippets/snippets.json"
+            }
+        ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
