@@ -8,7 +8,7 @@ class IniDocumentSymbolProvider {
         // 段
         const sectionRegex = /^\s*\[([^\]]+)\]/;
         // 键
-        const keyRegex = /^\s*([^\[;=]+)\s*=/;
+        const keyRegex = /^\s*([^\[#;=]+)\s*=/;
 
         let prevSecName = null;
         let prevSecRangeStart = null;

@@ -8,7 +8,7 @@ class IniFoldingRangeProvider {
         // 段
         const sectionRegex = /^\s*\[([^\]]+)\]/;
         // 键
-        const keyRegex = /^\s*([^\[;=]+)\s*=/;
+        const keyRegex = /^\s*([^\[#;=]+)\s*=/;
 
         // 支持嵌套的region语法：;region 和 ;endregion
         const regionStartRegex = /^\s*\;+\s*region/i;
